@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Playground</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <main>
+        <div id="flex-test-container">
+            <div id="div-1">Div1</div>
+            <div id="div-2">Div2</div>
+            <div id="div-3">Div3</div>
+            <div id="div-4">Div4</div>
+        </div>
+        <div>
+            <form>
+                <div>
+                    <label for="select-display">display:</label>
+                    <label for="select-flex-direction">flex-direction:</label>
+                    <label for="select-align-items">align-items:</label>
+                    <label for="select-justify-content">justify-content:</label>
+                    <label for="select-flex-wrap">flex-wrap:</label>
+                    <label for="input-gap">gap:</label>
+                    <label for="input-flex-grow-div-1">Div1 flex-grow:</label>
+                    <label for="input-flex-grow-div-2">Div2 flex-grow:</label>
+                    <label for="input-flex-grow-div-3">Div3 flex-grow:</label>
+                    <label for="input-flex-grow-div-4">Div4 flex-grow:</label>
+                </div>
+    
+                <div>
+                    <select name="display" id="select-display" disabled onchange="applyFlexStyles()">
+                        <option value="flex" selected>flex</option>
+                    </select>
+    
+                    <select name="flex-direction" id="select-flex-direction" onchange="applyFlexStyles()">
+                        <!-- Options for flex direction -->
+                        <option value="row">row</option>
+                        <option value="row-reverse">row-reverse</option>
+                        <option value="column">column</option>
+                        <option value="column-reverse">column-reverse</option>
+                    </select> 
+                    
+                    <select name="align-items" id="select-align-items" onchange="applyFlexStyles()">
+                        <!-- Options for align items -->
+                        <option value="start">start</option>
+                        <option value="end">end</option>
+                        <option value="stretch">stretch</option>
+                        <option value="center">center</option>
+                        <option value="flex-start">flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="baseline">baseline</option>
+                    </select>
+    
+                    <select name="justify-content" id="select-justify-content" onchange="applyFlexStyles()">
+                        <!-- Options for justify content -->
+                        <option value="start">start</option>
+                        <option value="end">end</option>
+                        <option value="flex-start">flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="center">center</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-around">space-around</option>
+                        <option value="space-evenly">space-evenly</option>
+                    </select>
+    
+                    <select name="flex-wrap" id="select-flex-wrap" onchange="applyFlexStyles()">
+                        <!-- Options for flex wrap -->
+                        <option value="nowrap">nowrap</option>
+                        <option value="wrap">wrap</option>
+                        <option value="wrap-reverse">wrap-reverse</option>
+                    </select>
+
+                    <input type="number" placeholder="input-gap" id="input-gap" value="0" min="0" oninput="applyFlexStyles()">
+
+                    <input type="number" id="input-flex-grow-div-1" placeholder="flex-grow" value="0" min="0" oninput="applyFlexStyles()">
+                    <input type="number" id="input-flex-grow-div-2" placeholder="flex-grow" value="0" min="0" oninput="applyFlexStyles()">
+                    <input type="number" id="input-flex-grow-div-3" placeholder="flex-grow" value="0" min="0" oninput="applyFlexStyles()">
+                    <input type="number" id="input-flex-grow-div-4" placeholder="flex-grow" value="0" min="0" oninput="applyFlexStyles()">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
