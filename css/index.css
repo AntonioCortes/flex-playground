@@ -29,18 +29,20 @@ body {
                 > label {
                     display: flex;
                     flex-direction: row;
-                    align-items: start;
+                    align-items: center;
                     justify-content: start;
+                    gap: 10px;
 
                     > select {
                         width: 100px;
                     }
 
-                    > input {
+                    > input[type='text'],
+                    > input[type='number'] {
                         width: 92px;
                     } 
     
-                    > span {
+                    > span:first-child {
                         display: inline-block;
                         width: 110px;
                     }

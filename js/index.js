@@ -30,9 +30,9 @@ function applyDivStyles() {
     const inputMaxWidth = document.getElementById('input-max-width');
 
     const inputFlexGrowDiv1 = document.getElementById('input-flex-grow-div-1');
-    const inputFlexGrowDiv2 = document.getElementById('input-flex-grow-div-1');
-    const inputFlexGrowDiv3 = document.getElementById('input-flex-grow-div-1');
-    const inputFlexGrowDiv4 = document.getElementById('input-flex-grow-div-1');
+    const inputFlexGrowDiv2 = document.getElementById('input-flex-grow-div-2');
+    const inputFlexGrowDiv3 = document.getElementById('input-flex-grow-div-3');
+    const inputFlexGrowDiv4 = document.getElementById('input-flex-grow-div-4');
 
     const height = inputHeight.disabled
                     ? 'unset'
@@ -80,7 +80,9 @@ function enableDisableInput(checkbox, inputId) {
 
     const input = document.getElementById(inputId);
 
-    if(checkbox.value = true) {
+    console.log(checkbox.checked)
+
+    if(checkbox.checked) {
         input.disabled = false;
     } else {
         input.disabled = true;
