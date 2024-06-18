@@ -90,18 +90,26 @@
                 <div class="flex-column flex-content-start-start">
                     <h2>Estilos de los div dentro del contenedor</h2>
 
-                    <label>
-                        <span>Div height:</span>
-                        <input type="number" id="input-height" placeholder="height" value="50" min="0" oninput="applyFlexStyles()" disabled>
-                        <span>px</span>
-                    </label>
+                    <div class="flex-row flex-content-start-start">
+                        <label>
+                            <span>Div height:</span>
+                            <input type="number" id="input-height" placeholder="height" value="50" min="0" oninput="applyFlexStyles()">
+                            <span>px</span>
+                        </label>
+
+                        <input type="checkbox" oninput="enableDisableInput(this, 'input-height')" value="true">
+                    </div>
+                    
 
                     <label>
                         <span>Div width:</span>
-                        <input type="number" id="input-width" placeholder="width" value="50" min="0" oninput="applyFlexStyles()" disabled>
+                        <input type="number" id="input-width" placeholder="width" value="50" min="0" oninput="applyFlexStyles()">
                         <span>px</span>
                     </label>
 
+                    <div class="flex-column flex-content-start-start">
+
+                    </div>
                     <label>
                         <span>Div max-height:</span>
                         <input type="number" id="input-max-height" placeholder="max-height" value="50" min="0" oninput="applyFlexStyles()">

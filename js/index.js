@@ -34,30 +34,59 @@ function applyDivStyles() {
     const inputFlexGrowDiv3 = document.getElementById('input-flex-grow-div-1');
     const inputFlexGrowDiv4 = document.getElementById('input-flex-grow-div-1');
 
-    div1.style.height = inputHeight.value + 'px';
-    div1.style.maxHeight = inputMaxHeight.value + 'px';
-    div1.style.width = inputWidth.value + 'px';
-    div1.style.maxWidth = inputMaxWidth.value + 'px';
+    const height = inputHeight.disabled
+                    ? 'unset'
+                    : inputHeight.value + 'px';
 
-    div2.style.height = inputHeight.value + 'px';
-    div2.style.maxHeight = inputMaxHeight.value + 'px';
-    div2.style.width = inputWidth.value + 'px';
-    div2.style.maxWidth = inputMaxWidth.value + 'px';
+    const width = inputWidth.disabled
+                    ? 'unset'
+                    : inputWidth.value + 'px';
 
-    div3.style.height = inputHeight.value + 'px';
-    div3.style.maxHeight = inputMaxHeight.value + 'px';
-    div3.style.width = inputWidth.value + 'px';
-    div3.style.maxWidth = inputMaxWidth.value + 'px';
+    const maxHeight = inputMaxHeight.disabled
+                    ? 'unset'
+                    : inputMaxHeight.value + 'px';
 
-    div4.style.height = inputHeight.value + 'px';
-    div4.style.maxHeight = inputMaxHeight.value + 'px';
-    div4.style.width = inputWidth.value + 'px';
-    div4.style.maxWidth = inputMaxWidth.value + 'px';
+    const maxWidth = inputMaxWidth.disabled
+                    ? 'unset'
+                    : inputMaxWidth.value + 'px';
+
+    div1.style.height = height;
+    div1.style.maxHeight = maxHeight;
+    div1.style.width = width;
+    div1.style.maxWidth = maxWidth;
+
+    div2.style.height = height;
+    div2.style.maxHeight = maxHeight;
+    div2.style.width = width;
+    div2.style.maxWidth = maxWidth;
+
+    div3.style.height = height;
+    div3.style.maxHeight = maxHeight;
+    div3.style.width = width;
+    div3.style.maxWidth = maxWidth;
+
+    div4.style.height = height;
+    div4.style.maxHeight = maxHeight;
+    div4.style.width = width;
+    div4.style.maxWidth = maxWidth;
 
     div1.style.flexGrow = inputFlexGrowDiv1.value;
     div2.style.flexGrow = inputFlexGrowDiv2.value;
     div3.style.flexGrow = inputFlexGrowDiv3.value;
     div4.style.flexGrow = inputFlexGrowDiv4.value;
+}
+
+function enableDisableInput(checkbox, inputId) {
+
+    const input = document.getElementById(inputId);
+
+    if(checkbox.value = true) {
+        input.disabled = false;
+    } else {
+        input.disabled = true;
+    }
+
+    applyDivStyles();
 }
 
 applyFlexStyles();
