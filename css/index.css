@@ -3,10 +3,6 @@ body {
     width: 100vw;
 
     main {
-        display: flex;
-        flex-direction: row;
-        align-items: start;
-        justify-content: start;
         height: 100%;
         width: 100%;
         gap: 20px;
@@ -20,35 +16,58 @@ body {
             overflow: auto;
 
             div {
-                height: 50px;
-                width: 50px;
-                min-height: 50px;
-                min-width: 50px;
-                max-height: 50px;
-                max-width: 50px;
                 border: solid black 1px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
             }
         }
     
         form {
-            display: flex;
-            flex-direction: row;
-            align-items: start;
-            justify-content: start;
-            gap: 10px;
+            gap: 20px;
 
-             > div {
-                display: flex;
-                flex-direction: column;
-                align-items: start;
-                justify-content: start;
+            > div {
                 gap: 10px;
-             }
+    
+                > label {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: start;
+                    justify-content: start;
+
+                    > select {
+                        width: 100px;
+                    }
+
+                    > input {
+                        width: 92px;
+                    } 
+    
+                    > span {
+                        display: inline-block;
+                        width: 110px;
+                    }
+                }
+            }
         }
     
     }
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-content-start-start {
+    align-items: start;
+    justify-content: start;
+}
+
+.flex-content-center-center {
+    align-items: center;
+    justify-content: center;
 }
 
