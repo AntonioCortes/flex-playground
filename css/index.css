@@ -6,50 +6,66 @@ body {
         height: 100%;
         width: 100%;
         gap: 20px;
-    
-        #flex-test-container {
-            display: flex;
-            border: solid black 1px;
-            height: 200px;
-            width: 300px;
-            resize: both;
-            overflow: auto;
 
-            div {
+        div:first-child {
+
+            gap: 30px;
+            flex-wrap: wrap;
+
+            #flex-test-container {
                 border: solid black 1px;
+                height: 200px;
+                width: 300px;
+                resize: both;
+                overflow: auto;
+    
+                div {
+                    border: solid black 1px;
+                }
             }
-        }
     
-        form {
-            gap: 20px;
-
-            > div {
-                gap: 10px;
+            
+        
+            form {
+                gap: 20px;
+                flex-wrap: wrap;
     
-                > label {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: start;
+                > div {
                     gap: 10px;
-
-                    > select {
-                        width: 100px;
-                    }
-
-                    > input[type='text'],
-                    > input[type='number'] {
-                        width: 92px;
-                    } 
+        
+                    > label {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: start;
+                        gap: 10px;
     
-                    > span:first-child {
-                        display: inline-block;
-                        width: 110px;
+                        > select {
+                            width: 100px;
+                        }
+    
+                        > input[type='text'],
+                        > input[type='number'] {
+                            width: 92px;
+                        } 
+        
+                        > span:first-child {
+                            display: inline-block;
+                            width: 110px;
+                        }
                     }
                 }
             }
         }
-    
+
+        #css-code-container {
+            flex-wrap: wrap;
+            gap: 10px;
+
+            code {
+                font-size: 1.2rem;
+            }
+        }
     }
 }
 
@@ -73,3 +89,12 @@ body {
     justify-content: center;
 }
 
+.flex-content-start-center {
+    align-items: start;
+    justify-content: center;
+}
+
+.flex-content-center-start {
+    align-items: center;
+    justify-content: start;
+}
