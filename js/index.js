@@ -16,6 +16,8 @@ const inputHeight = document.getElementById('input-height');
 const inputWidth = document.getElementById('input-width');
 const inputMaxHeight = document.getElementById('input-max-height');
 const inputMaxWidth = document.getElementById('input-max-width');
+const inputMinHeight = document.getElementById('input-min-height');
+const inputMinWidth = document.getElementById('input-min-width');
 
 const inputFlexGrowDiv1 = document.getElementById('input-flex-grow-div-1');
 const inputFlexGrowDiv2 = document.getElementById('input-flex-grow-div-2');
@@ -61,25 +63,41 @@ function applyDivStyles() {
                     ? 'unset'
                     : inputMaxWidth.value + 'px';
 
+    const minHeight = inputMinHeight.disabled
+                    ? 'unset'
+                    : inputMinHeight.value + 'px';
+
+    const minWidth = inputMinWidth.disabled
+                    ? 'unset'
+                    : inputMinWidth.value + 'px';
+
     div1.style.height = height;
     div1.style.maxHeight = maxHeight;
+    div1.style.minHeight = minHeight;
     div1.style.width = width;
     div1.style.maxWidth = maxWidth;
+    div1.style.minWidth = minWidth;
 
     div2.style.height = height;
     div2.style.maxHeight = maxHeight;
+    div2.style.minHeight = minHeight;
     div2.style.width = width;
     div2.style.maxWidth = maxWidth;
+    div2.style.minWidth = minWidth;
 
     div3.style.height = height;
     div3.style.maxHeight = maxHeight;
+    div3.style.minHeight = minHeight;
     div3.style.width = width;
     div3.style.maxWidth = maxWidth;
+    div3.style.minWidth = minWidth;
 
     div4.style.height = height;
     div4.style.maxHeight = maxHeight;
+    div4.style.minHeight = minHeight;
     div4.style.width = width;
     div4.style.maxWidth = maxWidth;
+    div4.style.minWidth = minWidth;
 
     div1.style.flexGrow = inputFlexGrowDiv1.value;
     div2.style.flexGrow = inputFlexGrowDiv2.value;
@@ -157,6 +175,14 @@ function getDivCSS(div) {
 
     if(div.style.maxWidth !== 'unset') {
         divCSS = divCSS.concat('    max-width: ' + div.style.maxWidth + ';\r\n');
+    }
+
+    if(div.style.minHeight !== 'unset') {
+        divCSS = divCSS.concat('    min-height: ' + div.style.minHeight + ';\r\n');
+    }
+
+    if(div.style.minWidth !== 'unset') {
+        divCSS = divCSS.concat('    min-width: ' + div.style.minWidth + ';\r\n');
     }
 
     divCSS = divCSS.concat('    flex-grow: ' + div.style.flexGrow + ';');
